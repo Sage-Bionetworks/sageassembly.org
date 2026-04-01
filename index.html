@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sage Assembly 2026: Trust in the Machine</title>
+  <meta name="description" content="Sage Assembly 2026 reconvenes after a six-year pause to explore Trust in the Machine: Verification, Agency, and the Future of Scientific Work. October 8, 2026 in Seattle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="images/sage-logo.jpg">
+</head>
+<body>
+
+<!-- Full-page crossing lines that span the entire site like sagebionetworks.org -->
+<svg id="page-lines" viewBox="0 0 1440 8000" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green lines -->
+  <line x1="-200" y1="6500" x2="1000" y2="-200" stroke="#459d45" stroke-width="1.8" opacity="0.3"/>
+  <line x1="-200" y1="6800" x2="1100" y2="-100" stroke="#59c959" stroke-width="1" opacity="0.15"/>
+  <line x1="200" y1="8200" x2="1640" y2="1500" stroke="#459d45" stroke-width="1.2" opacity="0.12"/>
+  <!-- Blue lines -->
+  <line x1="-200" y1="500" x2="1640" y2="5500" stroke="#1a7dbb" stroke-width="1.8" opacity="0.25"/>
+  <line x1="-200" y1="800" x2="1640" y2="5800" stroke="#1f9bea" stroke-width="1" opacity="0.12"/>
+  <line x1="-200" y1="-200" x2="1300" y2="4500" stroke="#1f9bea" stroke-width="0.8" opacity="0.08"/>
+  <!-- Orange lines -->
+  <line x1="400" y1="-200" x2="1640" y2="4800" stroke="#fd9701" stroke-width="1.8" opacity="0.25"/>
+  <line x1="500" y1="-200" x2="1640" y2="5000" stroke="#fd9701" stroke-width="1" opacity="0.12"/>
+  <line x1="800" y1="-200" x2="1640" y2="3000" stroke="#c87801" stroke-width="0.8" opacity="0.08"/>
+</svg>
+
+<!-- ========== Navigation ========== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <img class="logo-icon" src="images/sage-logo.jpg" alt="Sage Bionetworks" width="36" height="36">
+      <span><b>Sage</b> Assembly</span>
+    </a>
+    <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+    <ul>
+      <li><a href="#theme">Theme</a></li>
+      <li><a href="#speakers">Speakers</a></li>
+      <li><a href="#agenda">Agenda</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#sponsorship">Partner</a></li>
+      <li><a href="#past">Past Assemblies</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== Hero ========== -->
+<section class="hero" id="hero">
+  <div class="hero-content hero-grid">
+    <div class="hero-text">
+      <div class="overline">Sage Assembly 2026</div>
+      <h1>Trust in the Machine</h1>
+      <p class="subtitle">Verification, Agency, and the Future of Scientific Work</p>
+      <div class="meta">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          October 8, 2026
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Seattle, WA
+        </div>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          250&ndash;300 Invitees
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="#theme" class="btn btn-primary">Explore the Theme</a>
+        <a href="#sponsorship" class="btn btn-arrow">
+          Become a Partner
+          <svg width="24" height="24" viewBox="0 0 44 45" fill="#459d45" xmlns="http://www.w3.org/2000/svg"><path d="M30.4 23.2L17.6 36l-2-2 11.2-11.2L15.6 11.6l2-2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <img src="images/hero-machine.gif" alt="A Leonardo da Vinci-style illustration of a fantastical machine grinding scientific data into bright ideas" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- ========== Theme / About ========== -->
+<section class="about" id="theme">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">The 2026 Theme</div>
+      <h2>Trust in the Machine</h2>
+      <p>Reconvening after a six-year pause to ask the question that matters most for science right now.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>AI has landed <strong>unevenly across the sciences</strong>. Some fields embrace it as an accelerant; others resist it as a threat to <strong>craft, credibility, or meaning</strong>. These differences often come down to who holds <strong>agency</strong>, what counts as <strong>verification</strong>, and how <strong>feedback</strong> is produced.</p>
+        <p>Sage Assembly 2026 brings together approximately 250&ndash;300 <strong>researchers, technologists, artists, writers, regulators, and critical voices</strong> to examine the boundary between <strong>assistance and abdication</strong>, and to design norms that let AI expand capability without eroding responsibility or meaning.</p>
+        <p>How do we as scientists find the times and places where AI helps <strong>real humans do valid science</strong>? When should we choose <em>not</em> to automate? What does <strong>calibrated trust</strong> look like? Not a binary yes or no, but trust for <strong>which tasks</strong>, under <strong>what guardrails</strong>.</p>
+      </div>
+      <div class="theme-pillars">
+        <div class="pillar">
+          <h3>Verification</h3>
+          <p>Benchmarks are under scrutiny. When AI claims to do a month of a scientist's work in a day, how do we test that? Especially in biology, where there is no compiler, no proof checker, and ground truth is expensive.</p>
+        </div>
+        <div class="pillar blue">
+          <h3>Agency</h3>
+          <p>AI is simultaneously astonishing and absurd, "genius and clueless." How do scientists internalize the jagged shape of machine intelligence without cynicism or hype, and preserve meaningful human agency?</p>
+        </div>
+        <div class="pillar orange">
+          <h3>Boundary Spanning</h3>
+          <p>Organizations like Sage sit between disciplines, between sectors. What role do boundary-spanning institutions play in building the trust infrastructure that lets AI and humans work together?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Speakers ========== -->
+<section class="speakers" id="speakers">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">Who's Speaking</div>
+      <h2>Keynote Speakers</h2>
+      <p>Voices from technology, medicine, philosophy, and the arts converging on the question of trust.</p>
+    </div>
+    <div class="speakers-grid">
+
+      <div class="speaker-card">
+        <a href="https://en.wikipedia.org/wiki/Jaron_Lanier" target="_blank" rel="noopener">
+          <img class="speaker-photo" src="images/jaron-lanier.jpg" alt="Jaron Lanier">
+        </a>
+        <h3><a href="https://en.wikipedia.org/wiki/Jaron_Lanier" target="_blank" rel="noopener">Jaron Lanier</a></h3>
+        <p class="role">Computer Scientist, Musician &amp; Author</p>
+        <span class="tag keynote">Keynote / Confirmed</span>
+      </div>
+
+      <div class="speaker-card">
+        <a href="https://en.wikipedia.org/wiki/Susannah_Fox" target="_blank" rel="noopener">
+          <img class="speaker-photo" src="images/susannah-fox.jpg" alt="Susannah Fox">
+        </a>
+        <h3><a href="https://en.wikipedia.org/wiki/Susannah_Fox" target="_blank" rel="noopener">Susannah Fox</a></h3>
+        <p class="role">Health Researcher &amp; Entrepreneur, fmr. CTO of HHS</p>
+        <span class="tag keynote">Keynote / Confirmed</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-photo" src="images/anna-marie-wagner.jpg" alt="Anna Marie Wagner">
+        <h3>Anna Marie Wagner</h3>
+        <p class="role">Wikimedia Foundation</p>
+        <span class="tag keynote">Keynote</span>
+      </div>
+
+      <div class="speaker-card">
+        <img class="speaker-photo" src="https://i1.rgstatic.net/ii/profile.image/1000966778261505-1615660485933_Q512/Maninder-Kahlon-2.jpg" alt="Maninder (Mini) Kahlon">
+        <h3>Maninder (Mini) Kahlon</h3>
+        <p class="role">Conversational Health Researcher</p>
+        <span class="tag keynote">Keynote</span>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-avatar green">+</div>
+        <h3>More Speakers TBA</h3>
+        <p class="role">12&ndash;15 total speakers across keynotes and panels</p>
+        <span class="tag">Coming Soon</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== Agenda ========== -->
+<section class="agenda" id="agenda">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="overline">The Day</div>
+      <h2>Program Arc</h2>
+      <p>A dialectic structure: from the promise of the machine, through the irreplaceable role of the human, to a shared vision forward.</p>
+    </div>
+    <div class="timeline-2col">
+      <!-- Morning -->
+      <div class="timeline-col">
+        <h4 style="margin-bottom: 20px; color: var(--sage-green); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 600;">Morning</h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:00 AM</div>
+            <div class="timeline-title">Breakfast &amp; Registration</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">8:30 AM</div>
+            <div class="timeline-title">Welcome Remarks</div>
+            <div class="timeline-desc">Luca Foschini, CEO, Sage Bionetworks</div>
+          </div>
+          <div class="timeline-item keynote-item">
+            <div class="timeline-time">9:00 AM</div>
+            <div class="timeline-title">Keynote: Questioning the Machine</div>
+            <div class="timeline-desc">Jaron Lanier</div>
+          </div>
+          <div class="timeline-item keynote-item">
+            <div class="timeline-time">9:30 AM</div>
+            <div class="timeline-title">Keynote: Agency and the Machine</div>
+            <div class="timeline-desc">Susannah Fox</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">10:00 AM</div>
+            <div class="timeline-title">Q&amp;A</div>
+          </div>
+          <div class="timeline-item break">
+            <div class="timeline-time">10:30 AM</div>
+            <div class="timeline-title">Break</div>
+          </div>
+          <div class="timeline-item panel-item">
+            <div class="timeline-time">11:00 AM</div>
+            <div class="timeline-title">Panel: The Role of the Machine</div>
+            <div class="timeline-desc">The constructive case for AI in science</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:00 PM</div>
+            <div class="timeline-title">Lunch &amp; Featured Performance</div>
+          </div>
+        </div>
+      </div>
+      <!-- Afternoon -->
+      <div class="timeline-col">
+        <h4 style="margin-bottom: 20px; color: var(--sage-orange-bright); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.12em; font-weight: 600;">Afternoon</h4>
+        <div class="timeline">
+          <div class="timeline-item panel-item">
+            <div class="timeline-time">1:00 PM</div>
+            <div class="timeline-title">Panel: The Role of the Human</div>
+            <div class="timeline-desc">When human judgment is irreplaceable</div>
+          </div>
+          <div class="timeline-item keynote-item">
+            <div class="timeline-time">2:00 PM</div>
+            <div class="timeline-title">Keynote: Verification in a Forest of Robots</div>
+            <div class="timeline-desc">Anna Marie Wagner</div>
+          </div>
+          <div class="timeline-item keynote-item">
+            <div class="timeline-time">2:30 PM</div>
+            <div class="timeline-title">Keynote: Empathy in a Sea of LLMs</div>
+            <div class="timeline-desc">Maninder (Mini) Kahlon</div>
+          </div>
+          <div class="timeline-item break">
+            <div class="timeline-time">3:30 PM</div>
+            <div class="timeline-title">Break</div>
+          </div>
+          <div class="timeline-item panel-item">
+            <div class="timeline-time">4:00 PM</div>
+            <div class="timeline-title">Panel: The Role of Boundary Spanners</div>
+            <div class="timeline-desc">Bridging disciplines, sectors, and communities</div>
+          </div>
+          <div class="timeline-item keynote-item">
+            <div class="timeline-time">5:00 PM</div>
+            <div class="timeline-title">Closing Keynote: AI &amp; the Future</div>
+            <div class="timeline-desc">Speaker TBA</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">6:00 PM</div>
+            <div class="timeline-title">Closing Remarks</div>
+            <div class="timeline-desc">Luca Foschini</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">6:30 &ndash; 9:00 PM</div>
+            <div class="timeline-title">Reception &amp; Young Investigator Poster Session</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Venue ========== -->
+<section class="venue" id="venue">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">The Venue</div>
+      <h2>Bell Harbor Conference Center <span style="font-size: 0.5em; font-weight: 400; color: var(--sage-mid);">(preliminary)</span></h2>
+      <p>On the Seattle waterfront, the same iconic venue where Sage Assembly has convened before.</p>
+    </div>
+    <div class="venue-grid">
+      <div class="venue-info">
+        <h3>Event Details</h3>
+        <p>A one-day symposium followed by an evening reception overlooking Elliott Bay.</p>
+        <ul class="venue-details">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>2211 Alaskan Way, Pier 66<br>Seattle, WA 98121</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Thursday, October 8, 2026<br>8:00 AM &ndash; 9:00 PM</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>250&ndash;300 invite-based attendees from science, technology, the arts, and policy</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Full-day symposium plus evening reception</span>
+          </li>
+        </ul>
+      </div>
+      <div class="venue-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.4!2d-122.3472!3d47.6128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab4b1dee391%3A0x9e5d3b2fdb0ad4e8!2sBell+Harbor+International+Conference+Center!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Sponsorship ========== -->
+<section class="sponsorship" id="sponsorship">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">Partner With Us</div>
+      <h2>Sponsorship Opportunities</h2>
+      <p>Help bring this vital conversation to life. We offer flexible partnership options.</p>
+    </div>
+    <div class="tiers">
+      <div class="tier-card">
+        <div class="tier-icon green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#459d45" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Hosting Partner</h3>
+        <p>In-kind support covering event venue and meeting space, AV/production, daytime food &amp; beverage, and evening reception hospitality.</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-icon blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7dbb" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Program Partner</h3>
+        <p>Support the program speakers, including keynote honoraria, speaker travel, and hospitality for 12&ndash;15 presenters.</p>
+      </div>
+      <div class="tier-card">
+        <div class="tier-icon orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c87801" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Lead Partner</h3>
+        <p>Serve as the anchor partner with a suggested range of $100K&ndash;$150K total value (cash + in-kind), flexible to your internal structuring.</p>
+      </div>
+    </div>
+    <div class="sponsorship-cta">
+      <a href="mailto:luca@sagebionetworks.org" class="btn btn-primary">Get in Touch</a>
+      <p>Contact us to discuss a partnership tailored to your organization.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== Past Assembly ========== -->
+<section class="past-assembly" id="past">
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">Looking Back</div>
+      <h2>Previous Assemblies</h2>
+      <p>Sage Assembly has been convening cross-sector conversations since 2013.</p>
+    </div>
+
+    <!-- 2019 Assembly -->
+    <div class="past-event-header">
+      <h3>2019: Open Science and the Role of Common Evidence</h3>
+      <span class="year-badge">10th Anniversary</span>
+    </div>
+    <p class="past-description">
+      Sage Bionetworks hosted its 10th-anniversary symposium at Bell Harbor Conference Center on July 25, 2019. The day featured keynotes, panels, and participatory sessions exploring next-generation open science, followed by an evening celebration at the Center for Wooden Boats on Lake Union.
+    </p>
+
+    <table class="past-agenda-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Session</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time-col">9:00 AM</td>
+          <td><strong>Welcome</strong>: Lara Mangravite, Sage Bionetworks</td>
+        </tr>
+        <tr>
+          <td class="time-col">9:20 AM</td>
+          <td><strong>Assembly Address</strong>: Christine Borgman, UCLA</td>
+        </tr>
+        <tr>
+          <td class="time-col">9:50 AM</td>
+          <td><strong>Panel: Open Science Matters</strong><br>Moderator: Kara Woo &bull; Deborah Estrin, Cliff Lynch, Carly Strasser, Dario Taraborelli</td>
+        </tr>
+        <tr>
+          <td class="time-col">11:00 AM</td>
+          <td><strong>Assembly Address</strong>: Eric Schadt, Mount Sinai / Sema4</td>
+        </tr>
+        <tr>
+          <td class="time-col">11:30 AM</td>
+          <td><strong>Panel: Idealized Scientific Futures</strong><br>Moderator: Brian Bot &bull; Andy Coravos, Peter Goodhand, Gustavo Stolovitzky, Katie Baca-Motes</td>
+        </tr>
+        <tr>
+          <td class="time-col">1:00 PM</td>
+          <td><strong>Lunch Address</strong>: Yoko Sen &amp; Avery Sen, Sen Sound</td>
+        </tr>
+        <tr>
+          <td class="time-col">1:45 PM</td>
+          <td><strong>Assembly Address</strong>: Carolina Botero, Karisma Foundation</td>
+        </tr>
+        <tr>
+          <td class="time-col">2:15 PM</td>
+          <td><strong>Panel: Exploring Vulnerabilities of Open Approaches</strong><br>Moderator: John Wilbanks &bull; Heather Joseph, Jasmine McNealy, Jennifer Wagner, Ken Mandl</td>
+        </tr>
+        <tr>
+          <td class="time-col">3:15 PM</td>
+          <td><strong>Assembly Address</strong>: Kathy Hudson, Consultant</td>
+        </tr>
+        <tr>
+          <td class="time-col">4:00 PM</td>
+          <td><strong>Assembly Address</strong>: Cory Doctorow, Writer &amp; Activist</td>
+        </tr>
+        <tr>
+          <td class="time-col">4:30 PM</td>
+          <td><strong>Panel: Imagining Possible Knowledge Futures</strong><br>Moderator: Larsson Omberg &bull; Eva Barbarossa, Katindi Sivi-Njonjo, Avery Sen</td>
+        </tr>
+        <tr>
+          <td class="time-col">5:30 PM</td>
+          <td><strong>Closing Remarks</strong>: Lara Mangravite &amp; John Wilbanks</td>
+        </tr>
+        <tr>
+          <td class="time-col">6:30 PM</td>
+          <td><strong>Sage 10th Anniversary Celebration</strong>: Center for Wooden Boats, South Lake Union</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Webinar Series -->
+    <h3 class="past-section-title">2020 Webinar Series</h3>
+    <p class="past-description">
+      When COVID-19 paused in-person events, Sage Assembly pivoted to a virtual webinar series exploring timely questions at the intersection of technology, ethics, and public health.
+    </p>
+    <div class="webinar-list">
+      <div class="webinar-item">
+        <div class="date">March 30, 2020</div>
+        <h4>The Unintended Consequences of Good Intentions in Technology</h4>
+        <p>Speakers: Dr. Jasmine McNealy (University of Florida), Dr. Elaine Nsoesie (Boston University), Sean McDonald (Digital Public). Moderated by John Wilbanks.</p>
+      </div>
+      <div class="webinar-item">
+        <div class="date">April 9, 2020</div>
+        <h4>Research Ethics and Public Health Emergencies</h4>
+        <p>Speakers: Jennifer K. Wagner, JD, PhD (Geisinger), Professor Kayte Spector-Bagdady, JD, MBe (University of Michigan). Facilitated by Meg Doerr, Sage Bionetworks.</p>
+      </div>
+    </div>
+
+    <!-- Earlier Assemblies -->
+    <h3 class="past-section-title">Assembly History</h3>
+    <p class="past-history">
+      Sage Assembly has been a cornerstone of Sage Bionetworks' community engagement since its inception, held annually from 2013 through 2019. Previous themes explored open science, data commons, participant-centered research, and the evolving relationship between technology and the scientific enterprise. The Assembly format combines rapid presentations, keynote addresses, networking, and participatory sessions, all designed to forge unexpected connections among participants from diverse sectors including science, education, social impact, and the arts.
+    </p>
+  </div>
+</section>
+
+<!-- ========== Footer ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><b>Sage</b> Assembly</div>
+    <p>A convening by <a href="https://sagebionetworks.org" target="_blank" rel="noopener">Sage Bionetworks</a></p>
+    <p style="margin-top: 16px; font-size: 0.8rem; opacity: 0.6;">&copy; 2026 Sage Bionetworks. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ========== Scripts ========== -->
+<script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Smooth scroll for nav links & close mobile menu
+document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.querySelector('nav ul').classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>
