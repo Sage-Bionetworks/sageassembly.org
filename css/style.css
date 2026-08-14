@@ -654,6 +654,26 @@ nav ul li a.nav-cta:hover {
 
 .sponsorship .container { position: relative; z-index: 1; }
 
+.confirmed-sponsors {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.confirmed-sponsors .confirmed-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sage-green);
+  margin-bottom: 8px;
+}
+
+.confirmed-sponsors .confirmed-logo {
+  height: 190px;
+  width: auto;
+  max-width: 100%;
+}
+
 .tiers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
