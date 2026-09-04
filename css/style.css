@@ -674,6 +674,19 @@ nav ul li a.nav-cta:hover {
   max-width: 100%;
 }
 
+/* Secondary sponsor tier: sits directly under the program sponsor, sized down
+   to read as subordinate. The Renaissance Philanthropy lockup is a wide
+   horizontal mark, so it is constrained by width rather than height -- a fixed
+   height would make it far wider than the stacked Gates Ventures mark. */
+.confirmed-sponsors + .confirmed-sponsors {
+  margin-top: -48px;
+}
+
+.confirmed-sponsors.supporting .confirmed-logo {
+  height: auto;
+  width: 280px;
+}
+
 .tiers {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
