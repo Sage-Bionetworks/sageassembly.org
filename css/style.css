@@ -413,16 +413,27 @@ nav ul li a.nav-cta:hover {
 
 .speakers .container { position: relative; z-index: 1; }
 
+/* Five keynotes. auto-fill previously gave four columns at desktop and left a
+   single orphaned card on a second row. Flex rather than grid because grid
+   cannot centre a short final row, so every breakpoint below would orphan a
+   card the same way. */
 .speakers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
 .speaker-card {
+  flex: 0 0 calc((100% - 4 * 18px) / 5);
+  /* Column flex so the tag can be pushed to the bottom: the role lines run to
+     one, two or three lines across the five cards, which otherwise leaves the
+     tags sitting at five different heights. */
+  display: flex;
+  flex-direction: column;
   background: var(--sage-white);
   border-radius: 4px;
-  padding: 32px 24px;
+  padding: 26px 14px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -471,6 +482,8 @@ nav ul li a.nav-cta:hover {
 }
 
 .speaker-card .tag {
+  margin-top: auto;
+  align-self: center;
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 600;
@@ -485,6 +498,112 @@ nav ul li a.nav-cta:hover {
 .speaker-card .tag.keynote {
   background: var(--sage-orange-light);
   color: var(--sage-orange);
+}
+
+/* ---------- Panels ---------- */
+
+.panels { background: var(--sage-bg); }
+
+.panels .container { position: relative; z-index: 1; }
+
+.panels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.panel-card {
+  background: var(--sage-white);
+  border-top: 3px solid var(--sage-green);
+  border-radius: 4px;
+  padding: 28px 26px;
+}
+.panel-card.agency   { border-top-color: var(--sage-blue); }
+.panel-card.boundary { border-top-color: var(--sage-orange-bright); }
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--sage-border);
+}
+
+.panel-pillar {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--sage-green);
+}
+.panel-card.agency   .panel-pillar { color: var(--sage-blue); }
+.panel-card.boundary .panel-pillar { color: var(--sage-orange); }
+
+.panel-card h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 18px 0 10px;
+}
+
+.panel-framing {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--sage-mid);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.panel-time {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--sage-mid);
+  white-space: nowrap;
+}
+
+.panel-roster { list-style: none; }
+
+.panel-roster li {
+  padding: 11px 0;
+  border-bottom: 1px solid var(--sage-border);
+}
+.panel-roster li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.panel-roster li.moderator {
+  padding-top: 0;
+  border-bottom-color: var(--sage-gray);
+}
+
+.panel-role {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sage-gray);
+  margin-bottom: 2px;
+}
+
+.panel-roster .name {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--sage-black);
+}
+
+.panel-roster .affil {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--sage-mid);
+  line-height: 1.5;
+}
+
+/* Keep the three rosters on a shared baseline only when side by side */
+@media (min-width: 901px) {
+  .panel-card h3 { min-height: 2.6em; }
+  .panel-framing { min-height: 3.2em; }
 }
 
 /* ---------- Agenda ---------- */
@@ -675,17 +794,39 @@ nav ul li a.nav-cta:hover {
 }
 
 /* Secondary sponsor tier: sits directly under the program sponsor, sized down
-   to read as subordinate. The Renaissance Philanthropy lockup is a wide
-   horizontal mark, so it is constrained by width rather than height -- a fixed
-   height would make it far wider than the stacked Gates Ventures mark. */
+   to read as subordinate. */
 .confirmed-sponsors + .confirmed-sponsors {
   margin-top: -48px;
 }
 
+.confirmed-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px 40px;
+  margin-top: 12px;
+}
+
+/* These three marks have wildly different aspect ratios (Renaissance
+   Philanthropy ~3.5:1, AWS ~1.7:1, the Anthropic wordmark ~8:1), so a shared
+   height or width would make one of them dominate the row. Each is sized
+   individually for roughly equal optical weight instead. */
 .confirmed-sponsors.supporting .confirmed-logo {
   height: auto;
-  width: 280px;
+  width: auto;
 }
+
+/* Four logos with aspect ratios from ~1.7:1 to ~8:1 wrap to 3 + 1 on their own,
+   orphaning BEACON. This zero-height item forces the break after AWS instead,
+   so narrow viewports get a balanced 2 + 2. Inert until the row cannot hold
+   all four. */
+.logo-row-break { display: none; }
+
+.confirmed-sponsors.supporting .confirmed-logo.renphil { width: 280px; }
+.confirmed-sponsors.supporting .confirmed-logo.aws { height: 72px; }
+.confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 300px; }
+.confirmed-sponsors.supporting .confirmed-logo.beacon { height: 88px; }
 
 .tiers {
   display: grid;
@@ -894,6 +1035,17 @@ footer a { color: var(--sage-green-bright); }
 
 /* ---------- Responsive ---------- */
 
+/* Four logos need 1002px of row; below that they wrap, so force 2 + 2 here
+   rather than letting the natural 3 + 1 orphan BEACON. */
+@media (max-width: 1050px) {
+  .logo-row-break { display: block; flex: 0 0 100%; height: 0; }
+}
+
+@media (max-width: 1100px) {
+  .speakers-grid { gap: 28px; }
+  .speaker-card { flex-basis: calc((100% - 2 * 28px) / 3); padding: 32px 24px; }
+}
+
 @media (max-width: 900px) {
   h1 { font-size: 2.6rem; }
   h2 { font-size: 2rem; }
@@ -906,7 +1058,13 @@ footer a { color: var(--sage-green-bright); }
 
   .tiers { grid-template-columns: 1fr; }
 
-  .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+  .confirmed-logo-row { gap: 28px 40px; }
+  .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 232px; }
+  .confirmed-sponsors.supporting .confirmed-logo.aws { height: 60px; }
+  .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 248px; }
+  .confirmed-sponsors.supporting .confirmed-logo.beacon { height: 74px; }
+
+  .speaker-card { flex-basis: calc((100% - 28px) / 2); padding: 32px 24px; }
 }
 
 @media (max-width: 700px) {
@@ -932,9 +1090,15 @@ footer a { color: var(--sage-green-bright); }
   .hero { text-align: left; }
   .hero .meta { flex-direction: column; gap: 12px; }
 
-  .speakers-grid { grid-template-columns: 1fr; }
+  .speaker-card { flex-basis: 100%; }
 
   .hero-buttons { flex-direction: column; align-items: flex-start; }
 
   .past-event-header { flex-direction: column; gap: 8px; }
+
+  .confirmed-logo-row { gap: 28px 36px; margin-top: 8px; }
+  .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 200px; }
+  .confirmed-sponsors.supporting .confirmed-logo.aws { height: 52px; }
+  .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 216px; }
+  .confirmed-sponsors.supporting .confirmed-logo.beacon { height: 64px; }
 }
