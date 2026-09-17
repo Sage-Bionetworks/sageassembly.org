@@ -413,16 +413,27 @@ nav ul li a.nav-cta:hover {
 
 .speakers .container { position: relative; z-index: 1; }
 
+/* Five keynotes. auto-fill previously gave four columns at desktop and left a
+   single orphaned card on a second row. Flex rather than grid because grid
+   cannot centre a short final row, so every breakpoint below would orphan a
+   card the same way. */
 .speakers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
 }
 
 .speaker-card {
+  flex: 0 0 calc((100% - 4 * 18px) / 5);
+  /* Column flex so the tag can be pushed to the bottom: the role lines run to
+     one, two or three lines across the five cards, which otherwise leaves the
+     tags sitting at five different heights. */
+  display: flex;
+  flex-direction: column;
   background: var(--sage-white);
   border-radius: 4px;
-  padding: 32px 24px;
+  padding: 26px 14px;
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -471,6 +482,8 @@ nav ul li a.nav-cta:hover {
 }
 
 .speaker-card .tag {
+  margin-top: auto;
+  align-self: center;
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 600;
@@ -1015,6 +1028,11 @@ footer a { color: var(--sage-green-bright); }
 
 /* ---------- Responsive ---------- */
 
+@media (max-width: 1100px) {
+  .speakers-grid { gap: 28px; }
+  .speaker-card { flex-basis: calc((100% - 2 * 28px) / 3); padding: 32px 24px; }
+}
+
 @media (max-width: 900px) {
   h1 { font-size: 2.6rem; }
   h2 { font-size: 2rem; }
@@ -1032,7 +1050,7 @@ footer a { color: var(--sage-green-bright); }
   .confirmed-sponsors.supporting .confirmed-logo.aws { height: 60px; }
   .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 248px; }
 
-  .speakers-grid { grid-template-columns: repeat(2, 1fr); }
+  .speaker-card { flex-basis: calc((100% - 28px) / 2); padding: 32px 24px; }
 }
 
 @media (max-width: 700px) {
@@ -1058,7 +1076,7 @@ footer a { color: var(--sage-green-bright); }
   .hero { text-align: left; }
   .hero .meta { flex-direction: column; gap: 12px; }
 
-  .speakers-grid { grid-template-columns: 1fr; }
+  .speaker-card { flex-basis: 100%; }
 
   .hero-buttons { flex-direction: column; align-items: flex-start; }
 
