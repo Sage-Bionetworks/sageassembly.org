@@ -804,7 +804,7 @@ nav ul li a.nav-cta:hover {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 32px 56px;
+  gap: 32px 40px;
   margin-top: 12px;
 }
 
@@ -817,9 +817,16 @@ nav ul li a.nav-cta:hover {
   width: auto;
 }
 
+/* Four logos with aspect ratios from ~1.7:1 to ~8:1 wrap to 3 + 1 on their own,
+   orphaning BEACON. This zero-height item forces the break after AWS instead,
+   so narrow viewports get a balanced 2 + 2. Inert until the row cannot hold
+   all four. */
+.logo-row-break { display: none; }
+
 .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 280px; }
 .confirmed-sponsors.supporting .confirmed-logo.aws { height: 72px; }
 .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 300px; }
+.confirmed-sponsors.supporting .confirmed-logo.beacon { height: 88px; }
 
 .tiers {
   display: grid;
@@ -1028,6 +1035,12 @@ footer a { color: var(--sage-green-bright); }
 
 /* ---------- Responsive ---------- */
 
+/* Four logos need 1002px of row; below that they wrap, so force 2 + 2 here
+   rather than letting the natural 3 + 1 orphan BEACON. */
+@media (max-width: 1050px) {
+  .logo-row-break { display: block; flex: 0 0 100%; height: 0; }
+}
+
 @media (max-width: 1100px) {
   .speakers-grid { gap: 28px; }
   .speaker-card { flex-basis: calc((100% - 2 * 28px) / 3); padding: 32px 24px; }
@@ -1049,6 +1062,7 @@ footer a { color: var(--sage-green-bright); }
   .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 232px; }
   .confirmed-sponsors.supporting .confirmed-logo.aws { height: 60px; }
   .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 248px; }
+  .confirmed-sponsors.supporting .confirmed-logo.beacon { height: 74px; }
 
   .speaker-card { flex-basis: calc((100% - 28px) / 2); padding: 32px 24px; }
 }
@@ -1086,4 +1100,5 @@ footer a { color: var(--sage-green-bright); }
   .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 200px; }
   .confirmed-sponsors.supporting .confirmed-logo.aws { height: 52px; }
   .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 216px; }
+  .confirmed-sponsors.supporting .confirmed-logo.beacon { height: 64px; }
 }
