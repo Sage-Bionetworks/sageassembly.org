@@ -781,17 +781,32 @@ nav ul li a.nav-cta:hover {
 }
 
 /* Secondary sponsor tier: sits directly under the program sponsor, sized down
-   to read as subordinate. The Renaissance Philanthropy lockup is a wide
-   horizontal mark, so it is constrained by width rather than height -- a fixed
-   height would make it far wider than the stacked Gates Ventures mark. */
+   to read as subordinate. */
 .confirmed-sponsors + .confirmed-sponsors {
   margin-top: -48px;
 }
 
+.confirmed-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 32px 56px;
+  margin-top: 12px;
+}
+
+/* These three marks have wildly different aspect ratios (Renaissance
+   Philanthropy ~3.5:1, AWS ~1.7:1, the Anthropic wordmark ~8:1), so a shared
+   height or width would make one of them dominate the row. Each is sized
+   individually for roughly equal optical weight instead. */
 .confirmed-sponsors.supporting .confirmed-logo {
   height: auto;
-  width: 280px;
+  width: auto;
 }
+
+.confirmed-sponsors.supporting .confirmed-logo.renphil { width: 280px; }
+.confirmed-sponsors.supporting .confirmed-logo.aws { height: 72px; }
+.confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 300px; }
 
 .tiers {
   display: grid;
@@ -1012,6 +1027,11 @@ footer a { color: var(--sage-green-bright); }
 
   .tiers { grid-template-columns: 1fr; }
 
+  .confirmed-logo-row { gap: 28px 40px; }
+  .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 232px; }
+  .confirmed-sponsors.supporting .confirmed-logo.aws { height: 60px; }
+  .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 248px; }
+
   .speakers-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -1043,4 +1063,9 @@ footer a { color: var(--sage-green-bright); }
   .hero-buttons { flex-direction: column; align-items: flex-start; }
 
   .past-event-header { flex-direction: column; gap: 8px; }
+
+  .confirmed-logo-row { gap: 28px 36px; margin-top: 8px; }
+  .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 200px; }
+  .confirmed-sponsors.supporting .confirmed-logo.aws { height: 52px; }
+  .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 216px; }
 }
