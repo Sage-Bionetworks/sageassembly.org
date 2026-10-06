@@ -704,6 +704,8 @@ nav ul li a.nav-cta:hover {
 
 /* ---------- Venue ---------- */
 
+.art { background: var(--sage-bg); }
+
 .venue {
   background: var(--sage-warm);
 }
