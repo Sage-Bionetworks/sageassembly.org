@@ -409,28 +409,28 @@ nav ul li a.nav-cta:hover {
   display: block;
 }
 
-/* Play button: a dark disc with a white triangle, over the thumbnail. */
+/* Play button: a dark disc with a white triangle in the bottom-right corner.
+   The thumbnails are title cards, so a centred button would cover the title. */
 .video-play::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 68px;
-  height: 68px;
-  margin: -34px 0 0 -34px;
+  right: 16px;
+  bottom: 16px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: rgba(26, 26, 26, 0.75);
   transition: background 0.2s;
 }
 
+/* Triangle centred in the disc, nudged 2px right so it reads as centred. */
 .video-play::after {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -12px 0 0 -7px;
+  right: 34px;
+  bottom: 34px;
   border-style: solid;
-  border-width: 12px 0 12px 20px;
+  border-width: 10px 0 10px 16px;
   border-color: transparent transparent transparent #fff;
 }
 
