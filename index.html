@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sage Assembly 2026: Trust in the Machine</title>
-  <meta name="description" content="Sage Assembly 2026 reconvenes after a six-year pause to explore Trust in the Machine: Verification, Agency, and the Future of Scientific Work. October 8, 2026 in Seattle.">
+  <meta name="description" content="Sage Assembly 2026 reconvened after a six-year pause to explore Trust in the Machine: Verification, Agency, and the Future of Scientific Work. Held October 8, 2026 in Seattle. Watch the session videos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,13 +40,13 @@
       <span></span><span></span><span></span>
     </div>
     <ul>
+      <li><a href="#videos">Videos</a></li>
       <li><a href="#theme">Theme</a></li>
       <li><a href="#speakers">Speakers</a></li>
       <li><a href="#panels">Panels</a></li>
       <li><a href="#agenda">Agenda</a></li>
       <li><a href="#art">Art</a></li>
-      <li><a href="#venue">Venue</a></li>
-      <li><a href="#sponsorship">Partner</a></li>
+      <li><a href="#sponsorship">Partners</a></li>
       <li><a href="#past">Past Assemblies</a></li>
     </ul>
   </div>
@@ -62,21 +62,17 @@
       <div class="meta">
         <div class="meta-item">
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          October 8, 2026
+          Held October 8, 2026
         </div>
         <div class="meta-item">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Seattle, WA
-        </div>
-        <div class="meta-item">
-          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          250&ndash;300 Invitees
+          Bell Harbor, Seattle
         </div>
       </div>
       <div class="hero-buttons">
-        <a href="#theme" class="btn btn-primary">Explore the Theme</a>
-        <a href="#sponsorship" class="btn btn-arrow">
-          Become a Partner
+        <a href="#videos" class="btn btn-primary" data-video-any hidden>Watch the Sessions</a>
+        <a href="#theme" class="btn btn-arrow">
+          Explore the Theme
           <svg width="24" height="24" viewBox="0 0 44 45" fill="#459d45" xmlns="http://www.w3.org/2000/svg"><path d="M30.4 23.2L17.6 36l-2-2 11.2-11.2L15.6 11.6l2-2z"/></svg>
         </a>
       </div>
@@ -87,18 +83,75 @@
   </div>
 </section>
 
+<!-- ========== Videos ==========
+     Each card is filled from the VIDEOS map in the script at the bottom of the
+     page. A card whose ID is empty is removed on load, so this section can ship
+     before every upload is done. -->
+<section class="videos" id="videos" hidden>
+  <div class="container">
+    <div class="section-header">
+      <div class="overline">Watch</div>
+      <h2>Session Videos</h2>
+      <p>Recordings from the day, in program order.</p>
+    </div>
+    <div class="videos-grid">
+      <article class="video-card" id="video-friend" data-video="friend">
+        <div class="video-frame"></div>
+        <h3>Perspectives from Past to Future</h3>
+        <p>Stephen Friend, Co-Founder, Sage Bionetworks</p>
+      </article>
+      <article class="video-card keynote" id="video-fox" data-video="fox">
+        <div class="video-frame"></div>
+        <h3>Keynote: <em>Who owns the question?</em></h3>
+        <p>Susannah Fox</p>
+      </article>
+      <article class="video-card panel" id="video-machine" data-video="machine">
+        <div class="video-frame"></div>
+        <h3>Panel: The Role of the Machine</h3>
+        <p>Moderated by Stephen Friend, with Karmen Condic-Jurkic, Pablo Meyer Rojas, Monica Agrawal, and Hoifung Poon</p>
+      </article>
+      <article class="video-card panel" id="video-human" data-video="human">
+        <div class="video-frame"></div>
+        <h3>Panel: The Role of the Human</h3>
+        <p>Moderated by Meg Doerr, with Andrea Coravos, Shalmali Joshi, Greg Leppert, and Oren Etzioni</p>
+      </article>
+      <article class="video-card keynote" id="video-wagner" data-video="wagner">
+        <div class="video-frame"></div>
+        <h3>Keynote: <em>Beyond Black Box Science</em></h3>
+        <p>Anna Marie Wagner</p>
+      </article>
+      <article class="video-card keynote" id="video-kahlon" data-video="kahlon">
+        <div class="video-frame"></div>
+        <h3>Keynote: <em>The Biology of Agency</em></h3>
+        <p>Maninder (Mini) Kahlon</p>
+      </article>
+      <article class="video-card panel" id="video-boundary" data-video="boundary">
+        <div class="video-frame"></div>
+        <h3>Panel: The Role of Boundary Spanners</h3>
+        <p>Moderated by John Wilbanks, with Kaitlin Thaney, Karthik Ram, John Bracken, and Ernesto Ramirez</p>
+      </article>
+      <article class="video-card keynote" id="video-alsentzer" data-video="alsentzer">
+        <div class="video-frame"></div>
+        <h3>Gates Ventures' Closing Keynote: <em>From Clinician in the Loop to AI in the Workflow</em></h3>
+        <p>Emily Alsentzer</p>
+      </article>
+    </div>
+    <p class="videos-playlist" data-video-playlist hidden><a target="_blank" rel="noopener">Watch the full playlist on YouTube</a></p>
+  </div>
+</section>
+
 <!-- ========== Theme / About ========== -->
 <section class="about" id="theme">
   <div class="container">
     <div class="section-header">
       <div class="overline">The 2026 Theme</div>
       <h2>Trust in the Machine</h2>
-      <p>Reconvening after a six-year pause to ask the question that matters most for science right now.</p>
+      <p>Reconvened after a six-year pause to ask the question that matters most for science right now.</p>
     </div>
     <div class="about-grid">
       <div class="about-text">
         <p>AI has landed <strong>unevenly across the sciences</strong>. Some fields embrace it as an accelerant; others resist it as a threat to <strong>craft, credibility, or meaning</strong>. These differences often come down to who holds <strong>agency</strong>, what counts as <strong>verification</strong>, and how <strong>feedback</strong> is produced.</p>
-        <p>Sage Assembly 2026 brings together approximately 250&ndash;300 <strong>researchers, technologists, artists, writers, regulators, and critical voices</strong> to examine the boundary between <strong>assistance and abdication</strong>, and to design norms that let AI expand capability without eroding responsibility or meaning.</p>
+        <p>Sage Assembly 2026 brought together <strong>researchers, technologists, artists, writers, regulators, and critical voices</strong> to examine the boundary between <strong>assistance and abdication</strong>, and to design norms that let AI expand capability without eroding responsibility or meaning.</p>
         <p>How do we as scientists find the times and places where AI helps <strong>real humans do valid science</strong>? When should we choose <em>not</em> to automate? What does <strong>calibrated trust</strong> look like? Not a binary yes or no, but trust for <strong>which tasks</strong>, under <strong>what guardrails</strong>.</p>
       </div>
       <div class="theme-pillars">
@@ -123,7 +176,7 @@
 <section class="speakers" id="speakers">
   <div class="container">
     <div class="section-header">
-      <div class="overline">Who's Speaking</div>
+      <div class="overline">Who Spoke</div>
       <h2>Keynote Speakers</h2>
       <p>Voices from technology, medicine, philosophy, and the arts converging on the question of trust.</p>
     </div>
@@ -135,7 +188,8 @@
         </a>
         <h3><a href="https://en.wikipedia.org/wiki/Susannah_Fox" target="_blank" rel="noopener">Susannah Fox</a></h3>
         <p class="role">Health Researcher &amp; Entrepreneur, fmr. CTO of HHS</p>
-        <span class="tag keynote">Keynote / Confirmed</span>
+        <span class="tag keynote">Keynote</span>
+        <a class="watch-link" href="#video-fox" data-video="fox" hidden>Watch the keynote</a>
       </div>
 
       <div class="speaker-card">
@@ -144,7 +198,7 @@
         </a>
         <h3><a href="https://en.wikipedia.org/wiki/Jaron_Lanier" target="_blank" rel="noopener">Jaron Lanier</a></h3>
         <p class="role">Computer Scientist, Musician &amp; Author</p>
-        <span class="tag keynote">Keynote / Confirmed</span>
+        <span class="tag keynote">Keynote</span>
       </div>
 
       <div class="speaker-card">
@@ -157,7 +211,8 @@
           </a>
         </h3>
         <p class="role">Co-founder and CEO, Transfyr Bio</p>
-        <span class="tag keynote">Keynote / Confirmed</span>
+        <span class="tag keynote">Keynote</span>
+        <a class="watch-link" href="#video-wagner" data-video="wagner" hidden>Watch the keynote</a>
       </div>
 
       <div class="speaker-card">
@@ -170,7 +225,8 @@
     </a>
   </h3>
   <p class="role">CEO of Beheld</p>
-  <span class="tag keynote">Keynote / Confirmed</span>
+  <span class="tag keynote">Keynote</span>
+        <a class="watch-link" href="#video-kahlon" data-video="kahlon" hidden>Watch the keynote</a>
 </div>
 
 
@@ -180,7 +236,8 @@
         </a>
         <h3><a href="https://dbds.stanford.edu/people/emily-alsentzer/" target="_blank" rel="noopener">Emily Alsentzer</a></h3>
         <p class="role">Assistant Professor of Biomedical Data Science, Stanford University</p>
-        <span class="tag keynote">Keynote / Confirmed</span>
+        <span class="tag keynote">Keynote</span>
+        <a class="watch-link" href="#video-alsentzer" data-video="alsentzer" hidden>Watch the keynote</a>
       </div>
 
     </div>
@@ -191,7 +248,7 @@
 <section class="panels" id="panels">
   <div class="container">
     <div class="section-header">
-      <div class="overline">Who's On Stage</div>
+      <div class="overline">On Stage</div>
       <h2>Panels</h2>
       <p>Three moderated conversations, one for each thread of the theme. Not prepared talks.</p>
     </div>
@@ -215,6 +272,7 @@
           <li><span class="name">Monica Agrawal</span><span class="affil">Duke University</span></li>
           <li><span class="name">Hoifung Poon</span><span class="affil">Recursion</span></li>
         </ul>
+        <a class="watch-link" href="#video-machine" data-video="machine" hidden>Watch the panel</a>
       </div>
 
       <div class="panel-card agency">
@@ -235,6 +293,7 @@
           <li><span class="name">Greg Leppert</span><span class="affil">Institutional Data Initiative, Harvard</span></li>
           <li><span class="name">Oren Etzioni</span><span class="affil">University of Washington</span></li>
         </ul>
+        <a class="watch-link" href="#video-human" data-video="human" hidden>Watch the panel</a>
       </div>
 
       <div class="panel-card boundary">
@@ -255,6 +314,7 @@
           <li><span class="name">John Bracken</span><span class="affil">Digital Public Library of America</span></li>
           <li><span class="name">Ernesto Ramirez</span><span class="affil">Evidation</span></li>
         </ul>
+        <a class="watch-link" href="#video-boundary" data-video="boundary" hidden>Watch the panel</a>
       </div>
 
     </div>
@@ -286,12 +346,12 @@
           <div class="timeline-item">
             <div class="timeline-time">8:50 AM</div>
             <div class="timeline-title">Perspectives from Past to Future</div>
-            <div class="timeline-desc">Stephen Friend, Co-Founder, Sage Bionetworks</div>
+            <div class="timeline-desc">Stephen Friend, Co-Founder, Sage Bionetworks <a class="watch-link inline" href="#video-friend" data-video="friend" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item keynote-item">
             <div class="timeline-time">9:00 AM</div>
             <div class="timeline-title">Keynote: <em>Who owns the question?</em></div>
-            <div class="timeline-desc">Susannah Fox</div>
+            <div class="timeline-desc">Susannah Fox <a class="watch-link inline" href="#video-fox" data-video="fox" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item keynote-item">
             <div class="timeline-time">9:30 AM</div>
@@ -309,7 +369,7 @@
           <div class="timeline-item panel-item">
             <div class="timeline-time">11:00 AM</div>
             <div class="timeline-title">Panel: The Role of the Machine</div>
-            <div class="timeline-desc">Moderated by Stephen Friend &middot; <a href="#panels">see panelists</a></div>
+            <div class="timeline-desc">Moderated by Stephen Friend &middot; <a href="#panels">see panelists</a> <a class="watch-link inline" href="#video-machine" data-video="machine" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-time">12:00 PM</div>
@@ -325,17 +385,17 @@
           <div class="timeline-item panel-item">
             <div class="timeline-time">1:00 PM</div>
             <div class="timeline-title">Panel: The Role of the Human</div>
-            <div class="timeline-desc">Moderated by Meg Doerr &middot; <a href="#panels">see panelists</a></div>
+            <div class="timeline-desc">Moderated by Meg Doerr &middot; <a href="#panels">see panelists</a> <a class="watch-link inline" href="#video-human" data-video="human" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item keynote-item">
             <div class="timeline-time">2:00 PM</div>
             <div class="timeline-title">Keynote: <em>Beyond Black Box Science</em></div>
-            <div class="timeline-desc">Anna Marie Wagner</div>
+            <div class="timeline-desc">Anna Marie Wagner <a class="watch-link inline" href="#video-wagner" data-video="wagner" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item keynote-item">
             <div class="timeline-time">2:30 PM</div>
             <div class="timeline-title">Keynote: <em>The Biology of Agency</em></div>
-            <div class="timeline-desc">Maninder (Mini) Kahlon</div>
+            <div class="timeline-desc">Maninder (Mini) Kahlon <a class="watch-link inline" href="#video-kahlon" data-video="kahlon" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-time">3:00 PM</div>
@@ -348,12 +408,12 @@
           <div class="timeline-item panel-item">
             <div class="timeline-time">4:00 PM</div>
             <div class="timeline-title">Panel: The Role of Boundary Spanners</div>
-            <div class="timeline-desc">Moderated by John Wilbanks &middot; <a href="#panels">see panelists</a></div>
+            <div class="timeline-desc">Moderated by John Wilbanks &middot; <a href="#panels">see panelists</a> <a class="watch-link inline" href="#video-boundary" data-video="boundary" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item keynote-item">
             <div class="timeline-time">5:00 PM</div>
             <div class="timeline-title">Gates Ventures' Closing Keynote: <em>From Clinician in the Loop to AI in the Workflow</em></div>
-            <div class="timeline-desc">Emily Alsentzer</div>
+            <div class="timeline-desc">Emily Alsentzer <a class="watch-link inline" href="#video-alsentzer" data-video="alsentzer" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-time">5:30 PM</div>
@@ -386,7 +446,7 @@
     <div class="about-grid">
       <div class="about-text">
         <p>Buster has joined past Sage Assemblies in Seattle and in Shenzhen, where he staged a live art event addressing acid rain. His work often mixes social and environmental action.</p>
-        <p>Between sessions, silent video loops of two more of his works play on screens at the back of the room: <em>Sea Rise Migration Float</em> (2016), from the Rising Waters Confab at the Robert Rauschenberg studio on Captiva Island, Florida, and <em>Floating Drum Jam</em> (2026), a sonic study of 55-gallon oil drums conducted with a baton on Lake Washington.</p>
+        <p>Between sessions, silent video loops of two more of his works played on screens at the back of the room: <em>Sea Rise Migration Float</em> (2016), from the Rising Waters Confab at the Robert Rauschenberg studio on Captiva Island, Florida, and <em>Floating Drum Jam</em> (2026), a sonic study of 55-gallon oil drums conducted with a baton on Lake Washington.</p>
       </div>
       <div class="theme-pillars">
         <div class="pillar">
@@ -402,51 +462,13 @@
   </div>
 </section>
 
-<!-- ========== Venue ========== -->
-<section class="venue" id="venue">
-  <div class="container">
-    <div class="section-header">
-      <div class="overline">The Venue</div>
-      <h2>Bell Harbor International Conference Center</h2>
-      <p>On the Seattle waterfront, the same iconic venue where Sage Assembly has convened before.</p>
-    </div>
-    <div class="venue-grid">
-      <div class="venue-info">
-        <h3>Event Details</h3>
-        <p>A one-day symposium followed by an evening reception overlooking Elliott Bay.</p>
-        <ul class="venue-details">
-          <li>
-            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>2211 Alaskan Way, Pier 66<br>Seattle, WA 98121</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span>Thursday, October 8, 2026<br>7:30 AM &ndash; 9:00 PM</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span>250&ndash;300 invite-based attendees from science, technology, the arts, and policy</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>Full-day symposium plus evening reception</span>
-          </li>
-        </ul>
-      </div>
-      <div class="venue-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.4!2d-122.3472!3d47.6128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906ab4b1dee391%3A0x9e5d3b2fdb0ad4e8!2sBell+Harbor+International+Conference+Center!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ========== Sponsorship ========== -->
 <section class="sponsorship" id="sponsorship">
   <div class="container">
     <div class="section-header">
-      <div class="overline">Partner With Us</div>
-      <h2>Sponsorship Opportunities</h2>
-      <p>Help bring this vital conversation to life. We offer flexible partnership options.</p>
+      <div class="overline">With Thanks</div>
+      <h2>Our Partners</h2>
+      <p>Sage Assembly 2026 was made possible by these partners.</p>
     </div>
     <div class="confirmed-sponsors">
       <div class="confirmed-label">Program Sponsor</div>
@@ -462,32 +484,9 @@
         <img src="images/beacon.png" alt="BEACON, The Benchmarking, Evaluation, and Assessment Consortium for Science" class="confirmed-logo beacon">
       </div>
     </div>
-    <div class="tiers">
-      <div class="tier-card">
-        <div class="tier-icon green">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#459d45" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>Hosting Partner</h3>
-        <p>In-kind support covering event venue and meeting space, AV/production, daytime food &amp; beverage, and evening reception hospitality.</p>
-      </div>
-      <div class="tier-card">
-        <div class="tier-icon blue">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7dbb" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Program Partner</h3>
-        <p>Support the program speakers, including keynote honoraria, speaker travel, and hospitality for 12&ndash;15 presenters.</p>
-      </div>
-      <div class="tier-card">
-        <div class="tier-icon orange">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c87801" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <h3>Lead Partner</h3>
-        <p>Serve as the anchor partner with a suggested range of $100K&ndash;$150K total value (cash + in-kind), flexible to your internal structuring.</p>
-      </div>
-    </div>
     <div class="sponsorship-cta">
-      <a href="mailto:luca@sagebionetworks.org" class="btn btn-primary">Get in Touch</a>
-      <p>Contact us to discuss a partnership tailored to your organization.</p>
+      <a href="https://sagebionetworks.org/newsletters" target="_blank" rel="noopener" class="btn btn-primary">Sign Up for Sage News</a>
+      <p>Hear about the next Sage Assembly.</p>
     </div>
   </div>
 </section>
@@ -610,13 +609,70 @@
 
 <!-- ========== Scripts ========== -->
 <script>
+// Session videos. Paste each YouTube video ID (the part after "v=" in the
+// URL) into its slot. An empty slot hides that video's card and every
+// "watch" link that points to it.
+const VIDEOS = {
+  friend: '',
+  fox: '',
+  machine: '',
+  human: '',
+  wagner: '',
+  kahlon: '',
+  boundary: '',
+  alsentzer: '',
+};
+const PLAYLIST = '';  // YouTube playlist ID, the part after "list="
+
+document.querySelectorAll('[data-video]').forEach(el => {
+  const id = VIDEOS[el.dataset.video];
+  if (!id) {
+    if (el.classList.contains('video-card')) el.remove();
+    return;
+  }
+  el.hidden = false;
+  if (!el.classList.contains('video-card')) return;
+
+  // Show the thumbnail and load the player only on click, so the page does
+  // not pull in a YouTube player per video up front.
+  const frame = el.querySelector('.video-frame');
+  const title = el.querySelector('h3').textContent;
+  const play = document.createElement('button');
+  play.type = 'button';
+  play.className = 'video-play';
+  play.setAttribute('aria-label', 'Play: ' + title);
+  play.style.backgroundImage = `url(https://i.ytimg.com/vi/${id}/hqdefault.jpg)`;
+  play.addEventListener('click', () => {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = title;
+    iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    iframe.allowFullscreen = true;
+    frame.replaceChildren(iframe);
+  });
+  frame.appendChild(play);
+});
+
+if (document.querySelector('.video-card')) {
+  document.getElementById('videos').hidden = false;
+  document.querySelectorAll('[data-video-any]').forEach(el => { el.hidden = false; });
+} else {
+  document.querySelector('nav a[href="#videos"]').parentElement.remove();
+}
+
+if (PLAYLIST) {
+  const p = document.querySelector('[data-video-playlist]');
+  p.querySelector('a').href = `https://www.youtube.com/playlist?list=${PLAYLIST}`;
+  p.hidden = false;
+}
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 });
 
 // Smooth scroll for nav links & close mobile menu
-document.querySelectorAll('nav a[href^="#"]').forEach(a => {
+document.querySelectorAll('nav a[href^="#"], a.watch-link, a[data-video-any]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault();
     const target = document.querySelector(a.getAttribute('href'));

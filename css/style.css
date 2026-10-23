@@ -72,6 +72,9 @@ section {
   position: relative;
 }
 
+/* .btn and section set display, which would otherwise beat the attribute. */
+[hidden] { display: none !important; }
+
 /* Full-page crossing lines layer */
 #page-lines {
   position: absolute;
@@ -355,6 +358,110 @@ nav ul li a.nav-cta:hover {
   margin: 0 auto;
 }
 
+
+/* ---------- Videos ---------- */
+
+.videos { background: var(--sage-bg); }
+
+.videos .container { position: relative; z-index: 1; }
+
+/* Flex rather than grid so an odd final card centres instead of orphaning
+   left, same as the speakers grid. */
+.videos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.video-card {
+  flex: 0 0 calc((100% - 32px) / 2);
+  background: var(--sage-white);
+  border-top: 3px solid var(--sage-green);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.video-card.keynote { border-top-color: var(--sage-blue); }
+.video-card.panel   { border-top-color: var(--sage-orange-bright); }
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  background: var(--sage-black);
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-play {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--sage-black);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: block;
+}
+
+/* Play button: a dark disc with a white triangle, over the thumbnail. */
+.video-play::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 68px;
+  margin: -34px 0 0 -34px;
+  border-radius: 50%;
+  background: rgba(26, 26, 26, 0.75);
+  transition: background 0.2s;
+}
+
+.video-play::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -12px 0 0 -7px;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.video-play:hover::before,
+.video-play:focus-visible::before { background: var(--sage-green); }
+
+.video-card h3 {
+  font-size: 1.1rem;
+  margin: 20px 24px 6px;
+}
+
+.video-card p {
+  margin: 0 24px 22px;
+  color: var(--sage-mid);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.videos-playlist {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.watch-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.watch-link.inline { margin-top: 0; font-size: inherit; }
 
 /* ---------- About / Theme ---------- */
 
@@ -702,70 +809,10 @@ nav ul li a.nav-cta:hover {
   font-weight: 300;
 }
 
-/* ---------- Venue ---------- */
+/* ---------- Art ---------- */
 
 .art { background: var(--sage-bg); }
 
-.venue {
-  background: var(--sage-warm);
-}
-
-.venue-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.venue-info h3 {
-  color: var(--sage-black);
-  margin-bottom: 12px;
-}
-
-.venue-info > p {
-  color: var(--sage-mid);
-  margin-bottom: 24px;
-  font-weight: 300;
-  font-size: 1.05rem;
-}
-
-.venue-details {
-  list-style: none;
-  display: grid;
-  gap: 16px;
-}
-
-.venue-details li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  color: var(--sage-dark);
-  font-size: 0.95rem;
-  font-weight: 300;
-}
-
-.venue-details li svg {
-  width: 20px;
-  height: 20px;
-  stroke: var(--sage-green);
-  fill: none;
-  stroke-width: 2;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.venue-map {
-  border-radius: 4px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  background: var(--sage-border);
-}
-
-.venue-map iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
 
 /* ---------- Sponsorship ---------- */
 
@@ -829,49 +876,6 @@ nav ul li a.nav-cta:hover {
 .confirmed-sponsors.supporting .confirmed-logo.aws { height: 72px; }
 .confirmed-sponsors.supporting .confirmed-logo.anthropic { width: 300px; }
 .confirmed-sponsors.supporting .confirmed-logo.beacon { height: 88px; }
-
-.tiers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 48px;
-}
-
-.tier-card {
-  background: var(--sage-white);
-  border: 1px solid var(--sage-border);
-  border-radius: 4px;
-  padding: 36px 28px;
-  transition: border-color 0.3s;
-}
-
-.tier-card:hover { border-color: var(--sage-green); }
-
-.tier-card .tier-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.tier-card .tier-icon.green { background: var(--sage-green-light); }
-.tier-card .tier-icon.blue { background: var(--sage-blue-light); }
-.tier-card .tier-icon.orange { background: var(--sage-orange-light); }
-
-.tier-card h3 {
-  margin-bottom: 12px;
-  font-size: 1.15rem;
-}
-
-.tier-card p {
-  color: var(--sage-mid);
-  font-size: 0.95rem;
-  font-weight: 300;
-  line-height: 1.7;
-}
 
 .sponsorship-cta {
   text-align: center;
@@ -1055,10 +1059,9 @@ footer a { color: var(--sage-green-bright); }
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .hero-illustration { order: -1; }
 
-  .about-grid,
-  .venue-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
 
-  .tiers { grid-template-columns: 1fr; }
+  .video-card { flex-basis: 100%; }
 
   .confirmed-logo-row { gap: 28px 40px; }
   .confirmed-sponsors.supporting .confirmed-logo.renphil { width: 232px; }
