@@ -627,7 +627,7 @@ const PLAYLIST = '';  // YouTube playlist ID, the part after "list="
 document.querySelectorAll('[data-video]').forEach(el => {
   const id = VIDEOS[el.dataset.video];
   if (!id) {
-    if (el.classList.contains('video-card')) el.remove();
+    el.remove();
     return;
   }
   el.hidden = false;
