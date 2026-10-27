@@ -95,6 +95,11 @@
       <p>Recordings from the day, in program order.</p>
     </div>
     <div class="videos-grid">
+      <article class="video-card" id="video-welcome" data-video="welcome">
+        <div class="video-frame"></div>
+        <h3>Welcome Remarks</h3>
+        <p>Luca Foschini, CEO, Sage Bionetworks</p>
+      </article>
       <article class="video-card" id="video-friend" data-video="friend">
         <div class="video-frame"></div>
         <h3>Perspectives from Past to Future</h3>
@@ -341,7 +346,7 @@
           <div class="timeline-item">
             <div class="timeline-time">8:30 AM</div>
             <div class="timeline-title">Welcome Remarks</div>
-            <div class="timeline-desc">Luca Foschini, CEO, Sage Bionetworks</div>
+            <div class="timeline-desc">Luca Foschini, CEO, Sage Bionetworks <a class="watch-link inline" href="#video-welcome" data-video="welcome" hidden>&middot; watch</a></div>
           </div>
           <div class="timeline-item">
             <div class="timeline-time">8:50 AM</div>
@@ -613,6 +618,7 @@
 // URL) into its slot. An empty slot hides that video's card and every
 // "watch" link that points to it.
 const VIDEOS = {
+  welcome: 'xZF2Wap9g3U',
   friend: 'WLiL3CV6pE8',
   fox: 'T7rvmYMxRfQ',
   machine: '6jcwyMKblfA',
